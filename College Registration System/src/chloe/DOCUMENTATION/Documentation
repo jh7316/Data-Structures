@@ -1,0 +1,44 @@
+  OOP Assignment 1: Design of the Software
+  Chloe Han 
+  
+  
+  
+  For this project, I structured the classes into 4 packages as shown in the diagram: the COURSEDATA package that contains
+  the Course class and the Data class that converts the Courses file into an array list, USER package that contains 
+  the User superclass and the Admin and Student class that inherit from the User class, INTERFACE package that contains the 
+  Admin interface and Student interface that are implemented by admin and student class, and the MAIN package that contains 
+  the main method. 
+  
+  I implemented various concepts learnt in class as described below: 
+
+▪ Abstract Class 
+    The User class, from which Student and Admin classes extend, is an abstract class. 
+    I did so because it provides overall(abstract) structure of student and admin objects as they fall under 
+    the same category as user. 
+  
+	
+▪ Inheritance 
+     Both Student and Admin classes inherit from the User (super)class. 
+   
+       
+▪ Polymorphism 
+ 	In the program, the concept of polymorphism is implemented through method overloading and overriding; 
+ For example, both student and admin are allowed to view the courses a specific student is registered in, but admin needs
+  the student name and the array of whole students to do so whereas students only need their own courses list. Therefore, 
+  I created the overloaded methods ‘viewStudentCourse’ in Admin and Student class, where in Admin class the method has
+   3 parameters (String Firstname, String Lastname, ArrayList<Student> x) and in Student class it receives no parameter. 
+	I actively applied method overriding as I had the Student and Admin class implement Admin interface and Student interface
+	 respectively. When there are abstract methods in an interface, method overriding is necessary. So for example in the 
+	 StudentInterface, I declared 3 abstract methods ‘’viewCoursesNotFull, ‘withdrawCourse’ and ‘registerCourse’ which are 
+	 overriden in the Student and and User classes that implement those interfaces. 
+  
+
+▪ Encapsulation 
+	Encapsulation is the idea of data and methods that work under the same class, which is useful as it can hide specific 
+	information of the object from outside. They work with methods that can read and edit those information, which are getters 
+	and setters methods. These getters and setters are used in all of the classes I created, including Course, Student and
+	 Admin. 
+
+▪ The concept of ADT (Abstract Data Types)
+	The program is mostly driven by abstract data types, since most of the data are gathered and structured using Array Lists 
+	which implements the “List” interface, which is a type of abstract data type. 
